@@ -1,39 +1,23 @@
 package com.dev.sprint.model;
 
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 public class Player {
+    private int id;
     private String name;
     private String team;
     private int points;
+    private int position;
+    private String change;
 
     public Player() {}
 
-    public Player(String name,  String team, int points) {
-        this.name = name;
-        this.team = team;
-        this.points = points;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getTeam() {
-        return team;
-    }
-
-    public void setTeam(String team) {
-        this.team = team;
-    }
-
-    public int getPoints() {
-        return points;
-    }
-
-    public void setPoints(int points) {
-        this.points = points;
+    public Player(int id, String name, String team, int points, int position, String change) {
+        this.id = id; this.name = name; this.team = team;
+        this.points = points; this.position = position; this.change = change;
     }
 }
